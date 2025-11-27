@@ -1,0 +1,7 @@
+@use 'variables';
+
+@mixin desktop-styles() {
+    @media #{variables.$desktop-bp} {
+        @content;
+    }
+}

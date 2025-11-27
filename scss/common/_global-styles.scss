@@ -1,0 +1,11 @@
+@use 'variables';
+@use 'mixins';
+
+
+body {
+    // font-family: variables.$primary-ff;
+}
+
+.container {
+    max-width: 1600px;
+}

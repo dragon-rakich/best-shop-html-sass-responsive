@@ -1,0 +1,26 @@
+{
+  "name": "best-shop-html-sass-responsive",
+  "version": "1.0.0",
+  "description": "Responsive welcome page built with HTML, Sass, and Parcel.\r Uses Flexbox and CSS Grid for layout.",
+  "source": "index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dragon-rakich/best-shop-html-sass-responsive.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dragon-rakich/best-shop-html-sass-responsive/issues"
+  },
+  "homepage": "https://github.com/dragon-rakich/best-shop-html-sass-responsive#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.16.1",
+    "parcel": "^2.16.1",
+    "sass": "^1.94.2"
+  }
+}

@@ -1,2 +1,3 @@
 # best-shop-html-sass-responsive
-responsive welcome page
+Responsive welcome page built with HTML, Sass, and Parcel.
+Uses Flexbox and CSS Grid for layout.
