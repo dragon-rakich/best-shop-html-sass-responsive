@@ -1,13 +1,26 @@
 //font families
-// $primary-ff: "Open Sans", sans-serif;
-// $secondary-ff: "Oleo Script", cursive, sans-serif;
+$primary-ff: "Raleway", sans-serif;
+$secondary-ff: "Open Sans", cursive, sans-serif;
 
 
 //colors
-// $primary-color: #444;
-// $secondary-color: #1691C3;
-// $page-bg-color: #e4e4e4;
-// $logo-color: #fc4887;
+$primary-color-100: #07ACE6;
+$primary-color-200: #08A6E4;
+$secondary-color: #55DFB4;
+
+$grey-100: #E8E9ED;
+$grey-200: #A5A5A5;
+$grey-300: #95989A;
+$grey-400: #707070;
+
+$white-100: #FFFFFF;
+$white-200: #F7F7F7;
+
+$black-100: #000000;
+$black-200: #13253B;
+
+$red-100: #EB476E;
+$red-200: #FB3B64;
 
 //breakpoints(desktop large is default)
-$desktop-bp: "only screen and (max-width: 1400px)";
+$desktop-bp: "only screen and (min-width: 999px)";
