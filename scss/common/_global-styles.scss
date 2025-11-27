@@ -1,11 +1,12 @@
 @use 'variables';
 @use 'mixins';
 
-
 body {
-    // font-family: variables.$primary-ff;
+    font-family: variables.$primary-ff;
 }
 
 .container {
-    max-width: 1600px;
+    margin: 0 auto;
+    max-width: 1352px;
+    padding-inline: 15px;
 }
