@@ -18,9 +18,13 @@ $white-200: #F7F7F7;
 
 $black-100: #000000;
 $black-200: #13253B;
+$black-trans: #00000029;
 
 $red-100: #EB476E;
 $red-200: #FB3B64;
 
-//breakpoints(desktop large is default)
+//breakpoints(mobile is default)
 $desktop-bp: "only screen and (min-width: 999px)";
+
+//random
+$header-height: 70px;
