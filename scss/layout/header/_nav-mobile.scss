@@ -1,3 +1,5 @@
+@use '../../common/variables';
+
 .header__nav-mobile {
     position: absolute;
     top: variables.$header-height;
