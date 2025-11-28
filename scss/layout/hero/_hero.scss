@@ -1,0 +1,27 @@
+@use '../../common/variables';
+
+.hero {
+    height: calc(100vh - variables.$header-height);
+    background-image: url("/assets/background.png");
+    background-repeat: no-repeat;
+    background-size: auto 40% ;
+    background-position: center bottom;
+
+    padding-top: 6.25em;
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .hero__title {
+            font-size: 2.1875em;
+            line-height: 1.1714285714285715em;
+            margin-bottom: 0.5714285714285714em;
+        }
+        .hero__text {
+            font-size: 1em;
+            line-height: 1.375em;
+            margin-bottom: 1.75em;
+        }
+    }
+
+}
