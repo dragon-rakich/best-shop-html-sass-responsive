@@ -1,0 +1,29 @@
+@use "../../common/variables";
+
+@use 'menu-button';
+@use 'nav-mobile';
+
+.header__menu-mobile {
+    input[type=checkbox] {
+        display: none;
+
+        &:checked + .header__menu-button {
+            div:first-child {
+                transform: rotate(45deg) translate(3px, 3px);
+            }
+            div:nth-child(2) {
+                opacity: 0;
+            }
+            div:last-child {
+                transform: rotate(-45deg) translate(4px, -4px);
+            }
+        }
+                
+        &:checked ~ .header__nav-mobile {
+            opacity: 1;
+        }
+    }
+}
+
+
+

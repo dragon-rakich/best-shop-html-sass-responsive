@@ -1,0 +1,37 @@
+.header__nav-mobile {
+    position: absolute;
+    top: variables.$header-height;
+    left: 0;
+    display: block;
+    opacity: 0;
+    transition: opacity 0.15s ease-out;
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        width: 100vw;                    
+
+        padding-top: 1.875em;
+        padding-bottom: 2em;
+        padding-left: 0.9375em;
+
+        box-shadow: 0px 3px 6px variables.$black-trans;
+
+        a {
+            font-size: 0.6875em;
+            line-height: 1.3636363636363635em;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: variables.$grey-200;
+
+            letter-spacing: 0.29818181818181816em;
+
+            &:hover {
+                color: variables.$black-100;
+            }
+
+        }
+    }
+}

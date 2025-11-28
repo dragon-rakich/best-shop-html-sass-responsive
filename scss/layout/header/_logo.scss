@@ -1,0 +1,8 @@
+@use '../../common/variables';
+
+.header__logo {
+    font-size: 2em;
+    font-weight: 300;
+    line-height: 1.15625em;
+    color: variables.$primary-color-200;
+}
