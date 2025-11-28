@@ -20,6 +20,7 @@
         }
                 
         &:checked ~ .header__nav-mobile {
+            display: block;
             opacity: 1;
         }
     }
