@@ -1,0 +1,77 @@
+@use '../../common/variables';
+
+.stats {
+    padding-bottom: 3.125em;
+    .stats__title {
+        font-size: 1.875em;
+        line-height: 1.1666666666666667em;
+        text-align: center;
+
+        margin-bottom: 0.9333333333333333em;
+    }
+}
+
+.stats__columns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3em;
+
+    .stats__column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .stats__column-icon-wrapper {
+            width: 3.9375em;
+            height: 3.9375em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+
+            margin-bottom: 0.875em;
+            .stats__column-icon {
+                position: relative;
+            }
+        }
+        .stats__column-title {
+            font-size: 1.25em;
+            font-weight: 800;
+            line-height: 1.2em;
+            letter-spacing: 0.3em;
+            margin-bottom: 0.95em;
+        }
+
+        .stats__column-text {
+            font-size: 1.0625em;
+            line-height: 1.1764705882352942em;
+            color: variables.$grey-200;
+            text-align: center;
+        }
+    }
+}
+
+.stats__column:first-child .stats__column-icon-wrapper{
+    background-color: variables.$red-200;
+    .stats__column-icon {
+        width: variables.$user-icon-width;
+        left: calc(variables.$user-icon-width * 0.5);
+    }
+}
+.stats__column:nth-child(2) .stats__column-icon-wrapper{
+    background-color: variables.$primary-color-200;
+    .stats__column-icon {
+        width: variables.$views-icon-width;
+        left: calc(variables.$views-icon-width * 0.34);
+    }
+
+}
+.stats__column:last-child .stats__column-icon-wrapper{
+    background-color: variables.$secondary-color;
+    .stats__column-icon {
+        width: variables.$post-icon-width;
+        left: calc(variables.$post-icon-width * 0.5);
+    }
+
+}
