@@ -2,7 +2,7 @@
 
 .header__nav-mobile {
     position: absolute;
-    top: variables.$header-height;
+    top: variables.$header-height + 6px; //6 pikslov, da pozicioniramo pod senco headerja
     left: 0;
     z-index: 1;
 
