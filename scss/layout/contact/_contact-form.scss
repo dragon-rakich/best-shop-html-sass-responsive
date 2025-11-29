@@ -1,0 +1,47 @@
+@use '../../common/variables';
+
+@use 'checkbox';
+
+.contact__form {
+    padding-inline: 1em;
+    display: flex; //to help button go all the way right
+    flex-direction: column;
+    .contact__form-group {
+        label {
+            font-family: variables.$secondary-ff;
+
+            font-size: 0.6875em;
+            line-height: 1.3636363636363635em;
+            text-transform: uppercase;
+            letter-spacing: 0.2727272727272727em;
+            font-weight: bold;
+
+            color: variables.$primary-color-200;
+        }
+        input {
+            width: 100%;
+            border: none;
+            outline: none;
+
+            border-bottom: 1px solid variables.$grey-400;
+
+            font-size: 1.25em;
+            font-weight: 500;
+            padding-top: 0.7em;
+            // line-height: 1.75em;
+            padding-bottom: 0.35em;
+
+        }
+    
+        &:first-child {
+            margin-bottom: 2.625em;
+        }
+        &:nth-child(2) {
+            margin-bottom: 1.9375em;
+        }
+    }
+
+    .btn {
+        align-self: flex-end;
+    }
+}

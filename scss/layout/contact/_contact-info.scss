@@ -1,0 +1,54 @@
+@use '../../common/variables';
+
+.contact__info {
+    padding-inline: 1em;
+    .contact__title {
+        font-size: 2.5em;
+        line-height: 1.175em;
+        margin-bottom: 0.125em;
+    }
+    .contact__subtitle {
+        font-family: variables.$secondary-ff;
+        font-size: 1em;
+        line-height: 1.375em;
+
+        margin-bottom: 3em;
+    }
+    .contact__links {
+        display: flex;
+        flex-direction: column;
+        gap: 0.625em;
+        font-family: variables.$secondary-ff;
+        font-weight: 600;
+
+        a {
+            font-size: 1em;
+            line-height: 1.375em;
+
+            color: variables.$grey-200;
+
+            display: flex;
+            align-items: center;
+            gap: 0.5em;
+
+            &::before {
+                content: '';
+                display: inline-block;
+                width: 1.6875em;
+                height: 1.6875em;
+            }
+            &:first-child::before {
+                background-image: url("/assets/mail-icon.svg");
+                background-repeat: no-repeat;
+                background-position: center center;
+
+            }
+            &:last-child::before {
+                background-image: url("/assets/phone-icon.svg");
+                background-repeat: no-repeat;
+                background-position: center center;
+
+            }
+        }
+    }
+}

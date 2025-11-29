@@ -1,0 +1,15 @@
+@use '../../common/variables';
+
+@use 'contact-info';
+@use 'contact-form';
+
+.contact {
+    .contact__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3.3125em;
+        .contact__column {
+
+        }
+    }
+}
