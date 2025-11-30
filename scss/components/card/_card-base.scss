@@ -1,0 +1,71 @@
+@use '../../common/variables';
+
+.card {
+    width: 18.375em;
+    font-family: variables.$secondary-ff;
+    border-radius: 18px;
+
+    padding-top: 1.5625em;
+}
+
+.card__grid {
+    display: grid;
+    grid-template-columns: 47fr 52fr; //47% 53%
+    .card__column {
+        &:first-child {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+.card__header {
+    text-align: center;
+
+    .card__title {
+        font-family: variables.$primary-ff;
+
+        font-size: 1.25em;
+        font-weight: bold;
+
+        margin-bottom: 0.5em;
+    }
+
+    .card__price {
+        font-size: 2.875em;
+        font-weight: 300;
+
+        margin-bottom: 0.2em;
+    }
+
+    .card__subtext {
+        font-size: 0.75em;
+        font-weight: bold;
+    }
+}
+
+.card__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    li {
+        font-size: 0.875em;
+        line-height: 1.3571428571428572em;
+
+        display: flex;
+        gap: 10px;
+        align-items: center;
+
+        &:before {
+            content: '';
+            display: inline-block;
+            width: 0.875em;
+            height: 0.875em;
+            background-image: url("/assets/checkmark-icon-2.svg");
+            background-repeat: no-repeat;
+            background-position: center center;
+
+        }
+    }
+}

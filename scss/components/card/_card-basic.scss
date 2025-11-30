@@ -1,0 +1,18 @@
+@use '../../common/variables';
+
+.card--basic {
+    border: 1px solid variables.$red-100;
+
+    .card__price {
+        color: variables.$red-100;
+    }
+
+    .btn {
+        color: variables.$red-100;
+    }
+    li {
+        &:nth-child(4)::before, &:last-child::before {
+            background-image: url("/assets/close-icon.svg");
+        }
+    }
+}

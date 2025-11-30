@@ -1,8 +1,11 @@
 @use 'common/reset';
 @use 'common/global-styles';
 
+@use 'components/card/card.scss';
+
 @use 'layout/header/header';
 @use 'layout/hero/hero';
 @use 'layout/stats/stats';
+@use 'layout/pricing/pricing';
 @use 'layout/contact/contact';
 @use 'layout/footer/footer';

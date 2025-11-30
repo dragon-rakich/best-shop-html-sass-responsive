@@ -1,0 +1,13 @@
+@use '../../common/variables';
+
+.card--premium {
+    border: 1px solid variables.$secondary-color;
+
+    .card__price {
+        color: variables.$secondary-color;
+    }
+
+    .btn {
+        color: variables.$secondary-color;
+    }
+}
