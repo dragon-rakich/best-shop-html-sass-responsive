@@ -4,9 +4,6 @@
     display: flex;
     gap: 20px; 
 
-    margin-top: 1.875em;
-    margin-bottom: 1.25em;
-
     font-family: variables.$secondary-ff;
     font-size: 0.75em;
     color: variables.$grey-400;
@@ -15,6 +12,10 @@
     font-weight: normal;
     text-transform: none;
     letter-spacing: normal;
+
+    margin-bottom: 1.75em;
+
+
     cursor: pointer;
 
     input {
