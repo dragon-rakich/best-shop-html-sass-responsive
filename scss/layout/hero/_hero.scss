@@ -1,4 +1,5 @@
 @use '../../common/variables';
+@use '../../common/mixins';
 
 .hero {
     height: calc(100vh - variables.$header-height);
@@ -9,6 +10,8 @@
 
     padding-top: 6.25em;
     margin-bottom: 0.8125em;
+
+    @include mixins.tablet-styles() {background-size: contain; padding-top: 2.935em;}
     .container {
         display: flex;
         flex-direction: column;
@@ -21,7 +24,8 @@
         .hero__text {
             font-size: 1em;
             line-height: 1.375em;
-            margin-bottom: 2em;
+            margin-bottom: 2.5em;
+            text-align: center;
         }
     }
 
