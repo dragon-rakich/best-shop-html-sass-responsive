@@ -8,7 +8,7 @@
     }
 
     .btn {
-        color: variables.$red-100;
+        background-color: variables.$red-100;
     }
     li {
         &:nth-child(4)::before, &:last-child::before {

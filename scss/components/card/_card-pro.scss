@@ -8,7 +8,7 @@
     }
 
     .btn {
-        color: variables.$primary-color-100;
+        background-color: variables.$primary-color-100;
     }
     li {
         &:last-child::before {
