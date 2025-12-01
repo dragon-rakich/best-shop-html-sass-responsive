@@ -6,6 +6,9 @@
     padding-inline: 1em;
     display: flex; //to help button go all the way right
     flex-direction: column;
+
+    padding-bottom: 2.75em;
+
     .contact__form-group {
         label {
             font-family: variables.$secondary-ff;
@@ -37,11 +40,12 @@
             margin-bottom: 2.625em;
         }
         &:nth-child(2) {
-            margin-bottom: 1.9375em;
+            margin-bottom: 2em;
         }
     }
 
     .btn {
+        border: none;
         align-self: flex-end;
     }
 }
