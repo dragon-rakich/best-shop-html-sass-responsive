@@ -6,6 +6,9 @@
     border-radius: 18px;
 
     padding-top: 1.5625em;
+    padding-bottom: 3em;
+
+    position: relative;//to help position its buttons
 }
 
 .card__grid {
@@ -68,4 +71,11 @@
 
         }
     }
+}
+
+.card .btn {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
 }
