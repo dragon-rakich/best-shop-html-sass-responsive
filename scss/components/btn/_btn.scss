@@ -1,0 +1,47 @@
+@use '../../common/variables';
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: variables.$secondary-ff;
+    color: variables.$white-100;
+    font-weight: bold;
+}
+
+.btn--primary {
+    background-color: variables.$primary-color-200;
+}
+
+.btn--small {
+    font-size: 0.8125em;
+    line-height: 1.3846153846153846em;
+
+    padding-block: 1.2307692307692308em;
+    padding-inline: 4.384615384615385em;
+
+    border-radius: 23px;
+}
+
+.btn--medium {
+    font-size: 0.8125em;
+    line-height: 1.3846153846153846em;
+
+    padding-block: 1.5384615384615385em;
+    padding-inline: 7.461538461538462em;
+
+    border-radius: 35px;
+}
+
+.btn--large {
+    font-size: 1em;
+    line-height: 1.375em;
+
+    padding-block: 1.2em;
+    padding-inline: 5.75em;
+
+    border-radius: 40px;
+
+    box-shadow: 5px 10px 14px #07ACE629;
+}
