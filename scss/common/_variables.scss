@@ -24,7 +24,8 @@ $red-100: #EB476E;
 $red-200: #FB3B64;
 
 //breakpoints(mobile is default)
-$desktop-bp: "only screen and (min-width: 999px)";
+$tablet-bp: "only screen and (min-width: 900px)";
+$desktop-bp: "only screen and (min-width: 1200px)";
 
 //random
 $header-height: 70px;

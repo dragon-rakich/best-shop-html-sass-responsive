@@ -1,5 +1,12 @@
 @use 'variables';
 
+@mixin tablet-styles() {
+    @media #{variables.$tablet-bp} {
+        @content;
+    }
+}
+
+
 @mixin desktop-styles() {
     @media #{variables.$desktop-bp} {
         @content;
