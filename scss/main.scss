@@ -2,10 +2,12 @@
 @use 'common/global-styles';
 
 @use 'components/card/card.scss';
+@use 'components/box/box';
 
 @use 'layout/header/header';
 @use 'layout/hero/hero';
 @use 'layout/stats/stats';
+@use 'layout/benefits/benefits';
 @use 'layout/pricing/pricing';
 @use 'layout/contact/contact';
 @use 'layout/footer/footer';
