@@ -1,4 +1,5 @@
 @use '../../common/variables';
+@use '../../common/mixins';
 
 .card {
     width: 18.375em;
@@ -9,11 +10,16 @@
     padding-bottom: 3em;
 
     position: relative;//to help position its buttons
+    @include mixins.desktop-styles() {padding-top: 2.125em; width: 23.25em; max-width: 23.25em;}
 }
 
 .card__grid {
     display: grid;
     grid-template-columns: 47fr 52fr; //47% 53%
+
+    @include mixins.desktop-styles() {grid-template-columns: 1fr; gap: 50px;}
+
+
     .card__column {
         &:first-child {
             display: flex;
@@ -33,13 +39,18 @@
         font-weight: bold;
 
         margin-bottom: 0.5em;
+
+        @include mixins.desktop-styles() {margin-bottom: 0.7em;}
     }
 
     .card__price {
         font-size: 2.875em;
+        line-height: 1.34em;
         font-weight: 300;
 
         margin-bottom: 0.2em;
+
+        @include mixins.desktop-styles() {margin-bottom: 0.1em;}
     }
 
     .card__subtext {
@@ -52,6 +63,9 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    @include mixins.desktop-styles() {align-items: center; gap: 26px;}
+
     li {
         font-size: 0.875em;
         line-height: 1.3571428571428572em;

@@ -1,8 +1,11 @@
 @use '../../common/variables';
+@use '../../common/mixins';
 
 .card--highlighted {
     width: 21.25em;
     padding-top: 3.1875em;
     padding-bottom: 4em;
     box-shadow: 5px 10px 27px #07ACE629;
+
+    @include mixins.desktop-styles() {width: 25.3125em; max-width: 25.3125em;}
 }
