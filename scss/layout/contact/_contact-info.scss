@@ -1,11 +1,17 @@
 @use '../../common/variables';
+@use '../../common/mixins';
 
 .contact__info {
     padding-inline: 1em;
+    
+    @include mixins.desktop-styles() {padding-left: 13em;}
+
     .contact__title {
         font-size: 2.5em;
         line-height: 1.175em;
         margin-bottom: 0.125em;
+
+        @include mixins.desktop-styles() {font-size: 3.0625em; line-height: 1.16em; margin-bottom: 0.44em;}
     }
     .contact__subtitle {
         font-family: variables.$secondary-ff;
@@ -20,6 +26,8 @@
         gap: 0.625em;
         font-family: variables.$secondary-ff;
         font-weight: 600;
+
+        @include mixins.desktop-styles() {flex-direction: row; gap: 1.25em;}
 
         a {
             font-size: 1em;
