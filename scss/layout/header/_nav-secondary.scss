@@ -1,0 +1,34 @@
+@use '../../common/variables';
+@use '../../common/mixins';
+
+.header__nav-secondary {
+    display: none;
+    @include mixins.tablet-styles() {display: block;}
+
+    ul {
+        display: flex;
+
+        @include mixins.tablet-styles() {gap: 40px;}
+        @include mixins.desktop-styles() {gap: 95px;}
+
+        a {
+            color: variables.$grey-200;
+            font-size: 0.6875em;
+            line-height: 1.2727272727272727em;
+            font-weight: bold;
+            letter-spacing: 3.28px;
+            font-family: variables.$secondary-ff;
+            text-transform: uppercase;
+            padding: 2.1818181818181817em 1.0909090909090908em;
+            border-top: 4px solid transparent;
+            border-bottom: 4px solid transparent;
+            cursor: pointer;
+
+            &:hover {
+                color: variables.$black-100;
+                border-bottom-color: variables.$primary-color-100;
+
+            }
+        }
+    }
+}
