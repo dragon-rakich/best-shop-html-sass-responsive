@@ -1,9 +1,13 @@
 @use "../../common/variables";
+@use '../../common/mixins';
 
 @use 'menu-button';
 @use 'nav-mobile';
 
 .header__menu-mobile {
+    @include mixins.tablet-styles() {display: none;}
+
+
     input[type=checkbox] {
         display: none;
 
