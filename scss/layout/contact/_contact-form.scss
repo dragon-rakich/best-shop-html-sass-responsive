@@ -10,8 +10,6 @@
 
     padding-bottom: 2.75em;
 
-    @include mixins.desktop-styles() {padding-right: 10em;}
-
     .contact__form-group {
         label {
             font-family: variables.$secondary-ff;

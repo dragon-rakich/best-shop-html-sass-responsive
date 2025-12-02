@@ -4,8 +4,6 @@
 .contact__info {
     padding-inline: 1em;
     
-    @include mixins.desktop-styles() {padding-left: 13em;}
-
     .contact__title {
         font-size: 2.5em;
         line-height: 1.175em;

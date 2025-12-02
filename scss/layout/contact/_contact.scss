@@ -5,6 +5,7 @@
 @use 'contact-form';
 
 .contact {
+    padding-inline: 13em;
     .contact__grid {
         display: grid;
         grid-template-columns: 1fr;
