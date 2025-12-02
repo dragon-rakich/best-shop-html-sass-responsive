@@ -1,9 +1,12 @@
 @use '../../common/variables';
+@use '../../common/mixins';
 
 .benefits {
     padding-top: 2.625em;
     padding-bottom: 2.75em;
     background-color: variables.$white-200;
+
+    @include mixins.desktop-styles() {padding-top: 6.625em; padding-bottom: 6em;}
 
     .container {
         display: flex;
