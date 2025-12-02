@@ -24,7 +24,7 @@
     align-items: center;
     gap: 3em;
 
-    @include mixins.desktop-styles() {flex-direction: row; justify-content: space-around;}
+    @include mixins.desktop-styles() {flex-direction: row; justify-content: space-evenly;}
 
     .stats__column {
         display: flex;
