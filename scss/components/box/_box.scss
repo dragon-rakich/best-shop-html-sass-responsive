@@ -1,4 +1,5 @@
 @use '../../common/variables';
+@use '../../common/mixins';
 
 .box {
     width: 19.625em;
@@ -9,6 +10,7 @@
 .box__grid {
     display: grid;
     grid-template-columns: 1fr;
+    height: inherit;
 
     .box__column {
         display: flex;
@@ -33,6 +35,10 @@
         font-size: 0.875em;
         line-height: 1.3571428571428572em;
     }
+
+    .box__underline {
+        display: none;
+    }
 }
 
 .box:first-child .box__title {margin-bottom: 1.5em;}
@@ -47,7 +53,7 @@
 .box .box__img {position: relative; z-index: 2;}
 .box:first-child .box__img {width: 62%; padding-top: 2.25em;}
 .box:nth-child(2) .box__img{width: 45%; padding-top: 1.5em;}
-.box:last-child .box__img {width: 85%; padding-top: 1.7em; padding-bottom: 3.1em;}
+.box:last-child .box__img {width: 80%; padding-top: 1.7em; padding-bottom: 3.1em;}
 
 .box .box__bg-shape {position: absolute;}
 .box:first-child .box__bg-shape {
@@ -83,4 +89,190 @@
 
     border: 1px solid variables.$grey-100;
     border-radius: 5px;
+}
+
+
+//full RWD styles below!
+
+.box {@include mixins.desktop-styles() {width: 70.25em; height: 23.125em;}}
+
+//pomoč pri vizualizaciji
+.box__content {@include mixins.desktop-styles() {padding: 0;}}
+
+.box .box__column .box__img {@include mixins.desktop-styles() {padding: 0;}}
+
+.box .box__column {@include mixins.desktop-styles() {display: block;}}
+//
+
+
+
+.box .box__column {
+    @include mixins.desktop-styles() {
+        height: inherit;
+    }
+    .box__content {
+        @include mixins.desktop-styles() {
+        }
+
+        .box__title {
+            @include mixins.desktop-styles() {
+                font-size: 2.25em;
+                line-height: 1.16em;
+                margin-bottom: 0.7em;
+            }
+        }
+
+        .box__text{
+            @include mixins.desktop-styles() {
+                font-size: 1em;
+                line-height: 1.375em;
+                margin-bottom: 3.125em;
+            }
+        }
+
+        .box__underline {
+            @include mixins.desktop-styles() {
+                display: block;
+                width: 20em;
+                height: 4px;
+            }
+        }
+    }
+}
+
+.box .box__grid .box__column:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.box:first-child {
+    .box__grid {
+        @include mixins.desktop-styles() {
+            grid-template-columns: 2fr 3fr;
+        }
+    }
+
+    .box__column:nth-child(2) {
+        @include mixins.desktop-styles() {
+
+            grid-column: 1/2;
+            grid-row: 1/2;
+
+        }
+    }
+        
+    .box__img {
+        @include mixins.desktop-styles() {
+            width: 54%;
+            margin-inline: auto;
+            top: 34%;
+        }
+    }
+
+    .box__bg-shape {
+        @include mixins.desktop-styles() {
+            width: 10.8em;
+            height: 10.8em;
+            border-radius: 40px;
+
+            top: 23%;
+            right: 31%;
+            transform: translateX(40%) rotate(45deg);
+        }
+    }
+
+    .box__content {
+        @include mixins.desktop-styles() {
+            padding-left: 2.1875em;
+        }
+    }
+
+    .box__underline {
+        @include mixins.desktop-styles() {
+            background-color: variables.$red-200;
+        }
+    }
+    
+}
+
+.box:nth-child(2) {
+    .box__grid {
+        @include mixins.desktop-styles() {
+            grid-template-columns: 3fr 2fr;
+        }
+    }
+
+    .box__bg-shape {
+        @include mixins.desktop-styles() {
+            width: 20em;
+            height: 20em;
+
+        }
+    }
+
+    .box__img {
+        @include mixins.desktop-styles() {
+            width: 52%;
+            top: 9%;
+            left: 15%;
+        }
+    }
+
+    .box__content {
+        @include mixins.desktop-styles() {
+            padding-right: 0.5em;
+        }
+    }
+
+    .box__underline {
+        @include mixins.desktop-styles() {
+            background-color: variables.$primary-color-200;
+        }
+    }
+
+}
+
+.box:last-child {
+    @include mixins.desktop-styles() {background: transparent; border: none;}
+    .box__grid {
+        @include mixins.desktop-styles() {
+            grid-template-columns: 3fr 2fr;
+        }
+    }
+
+    .box__column:first-child {
+        @include mixins.desktop-styles() {
+            grid-column: 2/2;
+            grid-row: 1/3;
+        }
+    }
+
+    .box__column:nth-child(2) {
+        @include mixins.desktop-styles() {
+            width: 90%;
+            background-color: variables.$white-100;
+            border: 1px solid variables.$grey-100;
+        }
+    }
+
+    .box__content {
+        @include mixins.desktop-styles() {
+            padding-left: 2.1875em;
+        }
+    }
+
+    .box__underline {
+        @include mixins.desktop-styles() {
+            background-color: variables.$secondary-color;
+        }
+    }
+
+    .box__img {
+        @include mixins.desktop-styles() {
+            width: 58%;
+            top: 25%;
+            left: 24%;
+        }
+    }
 }
