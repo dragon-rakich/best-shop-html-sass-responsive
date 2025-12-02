@@ -6,12 +6,14 @@
     padding-bottom: 2.75em;
     background-color: variables.$white-200;
 
-    @include mixins.desktop-styles() {padding-top: 6.625em; padding-bottom: 6em;}
+    @include mixins.desktop-styles() {padding-top: 6.625em; padding-bottom: 6em; }
 
     .container {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 41px;
+        @include mixins.desktop-styles() {padding-inline: 8em; }
+
     }
 }
