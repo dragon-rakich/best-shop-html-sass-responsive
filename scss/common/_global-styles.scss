@@ -5,6 +5,11 @@ body {
     font-family: variables.$primary-ff;
 }
 
+input {
+    outline: none;
+    border: none;
+}
+
 .container {
     margin: 0 auto;
     max-width: 1352px;
