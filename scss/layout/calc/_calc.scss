@@ -1,0 +1,184 @@
+@use '../../common/variables';
+@use '../../common/mixins';
+
+.calc {
+    padding-top: 5.4375em;
+    padding-bottom: 6.8125em;
+
+    font-family: variables.$secondary-ff;
+    background-color: variables.$white-200;
+    .container {
+        max-width: 865px;
+
+        .calc__title {
+            font-size: 2.25em;
+            line-height: 1.16em;
+            text-align: center;
+            font-family: variables.$primary-ff;
+
+            margin-bottom: 1.47em;
+        }
+    }
+}
+
+.calc__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 47px;
+
+    @include mixins.tablet-styles() {grid-template-columns: 1fr 1fr;}
+
+
+    .calc__col {
+
+    }
+}
+
+.calc__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .calc__field, .calc__dropdown {
+        font-size: 0.8125em;
+        line-height: 1.38em;
+
+        padding-block: 0.8125em;
+        padding-left: 1.53em;
+
+        border: 1px solid variables.$primary-color-200;
+        border-radius: 6px;
+        &::placeholder {
+            color: variables.$grey-200;
+        }
+    }
+
+    .calc__dropdown {
+        background-image: url("/assets/arrow-down-icon.svg");
+        background-repeat: no-repeat;
+        background-position: 98% 50%;
+
+        .calc__dropdown-placeholder {
+            color: variables.$grey-200;
+        }
+
+        .calc__dropdown-list {
+            display: none;
+            position: absolute;
+            left: 0;
+
+            width: inherit;
+            border: 1px solid variables.$red-100;
+            border-radius: 6px;
+        }
+    }
+
+    .calc__checkbox-field {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+
+        input {
+            &:checked ~ .calc__custom-checkbox img {
+                display: block;
+            }
+
+        }
+
+        .calc__native-checkbox {
+            display: none;
+        }
+
+        .calc__custom-checkbox {
+            width: 1.5em;
+            height: 1.5em;
+            border: 1px solid variables.$grey-400;
+            border-radius: 4px;
+    
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {display: none;}
+            
+        }
+
+        .calc__checkbox-label {
+            font-size: 0.75em;
+        }
+    }
+}
+
+.calc__output {
+    display: flex;
+    flex-direction: column;
+
+    .calc__output-rows {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        margin-bottom: 1.375em;
+        
+        .calc__output-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            display: none;
+            opacity: 1;
+
+            color: variables.$white-100;
+
+            background-color: variables.$secondary-color;
+            border-radius: 6px;
+            box-shadow: 0px 3px 6px variables.$black-trans;
+
+            padding-block: 0.375em;
+            padding-inline: 1.25em;
+
+            @include mixins.tablet-styles() {display: flex; opacity: 0;}
+
+            .calc__output-row-name, .calc__output-row-middle {
+                font-size: 0.875em;
+                line-height: 1.357em;
+            }
+
+            .calc__output-row-price {
+                font-size: 1.125em;
+                line-height: 1.333em;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .calc__total {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+
+        align-self: flex-end;
+
+        padding-left: 0.9375em;
+        padding-right: 1.1875em;
+        padding-block: 0.5625em;
+
+        border-radius: 6px;
+        box-shadow: 0px 3px 6px variables.$black-trans;
+
+        background-color: variables.$primary-color-200;
+        color: variables.$white-100;
+
+        .calc__total-name {
+            font-size: 0.875em;
+            line-height: 1.357em;
+        }
+
+        .calc__total-price {
+            font-size: 1.125em;
+            line-height: 1.333em;
+            font-weight: bold;
+        }
+    }
+}
