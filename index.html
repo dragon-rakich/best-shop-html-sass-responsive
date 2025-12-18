@@ -221,23 +221,34 @@
             <h2 class="calc__title">Calculate how much you'll pay</h2>
             <div class="calc__grid">
                 <div class="calc__col">
-                    <form action="" class="calc__input">
+                    <form action="" class="calc__form">
                         <input type="number" class="calc__field" id="quantity" name="quantity" min="1" step="1" placeholder="Products quantity"/>
                         <input type="number" class="calc__field" id="orders" name="orders" min="1" step="1" placeholder="Estimated orders in month" />
-                        <select id="package" class="calc__dropdown" name="package">
-                            <option class="calc__option" value="Basic">Basic</option>
-                            <option class="calc__option" value="Professional">Professional</option>
-                            <option class="calc__option" value="Premium">Premium</option>
+                        <div class="calc__dropdown" >
+                            <p class="calc__dropdown-placeholder">Choose package</p>
+                            <ul class="calc__dropdown-list">
+                                <li class="calc__dropdown-option">Basic</li>
+                                <li class="calc__dropdown-option">Professional</li>
+                                <li class="calc__dropdown-option">Premium</li>
+                            </ul>
+                        </div>
+                        <!-- hidden select -->
+                        <select id="hidden-select"  name="package" hidden>
+                            <option value="Basic">Basic</option>
+                            <option value="Professional">Professional</option>
+                            <option value="Premium">Premium</option>
                         </select>
+                        <!-- e: hidden select -->
+
                         <label class="calc__checkbox-field">
-                            <input type="checkbox" id="accounting">
-                            <div class="calc__custom-checkbox"></div>
-                            <label class="calc__checkbox-label">Accounting</label>
+                            <input type="checkbox" class="calc__native-checkbox" id="accounting">
+                            <div class="calc__custom-checkbox"><img src="assets/checkmark-icon.svg" alt="check mark icon"></div>
+                            <p class="calc__checkbox-label">Accounting</p>
                         </label>
                         <label class="calc__checkbox-field">
-                            <input type="checkbox" id="terminal">
-                            <div class="calc__custom-checkbox"></div>
-                            <label class="calc__checkbox-label">Rental of a payment terminal</label>
+                            <input type="checkbox" class="calc__native-checkbox" id="terminal">
+                            <div class="calc__custom-checkbox"><img src="assets/checkmark-icon.svg" alt="check mark icon"></div>
+                            <p class="calc__checkbox-label">Rental of a payment terminal</label>
                         </label>
                     </form>
                 </div>
@@ -245,10 +256,29 @@
                     <div class="calc__output">
                         <div class="calc__output-rows">
                             <div class="calc__output-row">
-                                <p class="calc__output-row-item"></p>
-                                <p class="calc__output-row-item"></p>
-                                <p class="calc__output-row-item"></p>
+                                <p class="calc__output-row-item">Products</p>
+                                <p class="calc__output-row-item">0x0</p>
+                                <p class="calc__output-row-item">$0</p>
                             </div>
+                            <div class="calc__output-row">
+                                <p class="calc__output-row-item">Order</p>
+                                <p class="calc__output-row-item">0x0</p>
+                                <p class="calc__output-row-item">$0</p>
+                            </div>
+                            <div class="calc__output-row">
+                                <p class="calc__output-row-item">Package</p>
+                                <p class="calc__output-row-item">Package Name</p>
+                                <p class="calc__output-row-item">$0</p>
+                            </div>
+                            <div class="calc__output-row">
+                                <p class="calc__output-row-item">Accounting</p>
+                                <p class="calc__output-row-item">$0</p>
+                            </div>
+                            <div class="calc__output-row">
+                                <p class="calc__output-row-item">Terminal</p>
+                                <p class="calc__output-row-item">$0</p>
+                            </div>
+
                         </div>
                         <div class="calc__total">
                             <p>Total</p>
