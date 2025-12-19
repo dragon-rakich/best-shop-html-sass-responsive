@@ -128,8 +128,6 @@
             justify-content: space-between;
             align-items: center;
 
-            display: none;
-
             color: variables.$white-100;
 
             background-color: variables.$secondary-color;
@@ -138,6 +136,8 @@
 
             padding-block: 0.375em;
             padding-inline: 1.25em;
+
+            display: none;//invisible at first
 
             .calc__output-row-name, .calc__output-row-middle {
                 font-size: 0.875em;
