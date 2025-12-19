@@ -30,7 +30,6 @@
 
 
     .calc__col {
-
     }
 }
 
@@ -113,6 +112,9 @@
 .calc__output {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+
+    @include mixins.tablet-styles() {height: 100%;}
 
     .calc__output-rows {
         display: flex;
@@ -127,7 +129,6 @@
             align-items: center;
 
             display: none;
-            opacity: 1;
 
             color: variables.$white-100;
 
@@ -137,8 +138,6 @@
 
             padding-block: 0.375em;
             padding-inline: 1.25em;
-
-            @include mixins.tablet-styles() {display: flex; opacity: 0;}
 
             .calc__output-row-name, .calc__output-row-middle {
                 font-size: 0.875em;
