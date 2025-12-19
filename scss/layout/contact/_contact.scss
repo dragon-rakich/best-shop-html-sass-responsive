@@ -5,8 +5,8 @@
 @use 'contact-form';
 
 .contact {
-
-    @include mixins.desktop-styles() {padding-inline: 13em;}
+    padding-top: 3em;
+    @include mixins.desktop-styles() {padding-inline: 13em; padding-top: 5em;}
 
     .contact__grid {
         display: grid;
