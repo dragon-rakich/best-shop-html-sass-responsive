@@ -48,12 +48,16 @@
 
         border: 1px solid variables.$primary-color-200;
         border-radius: 6px;
+
+        background-color: variables.$white-100;
         &::placeholder {
             color: variables.$grey-200;
         }
     }
 
     .calc__dropdown {
+        position: relative;
+
         .calc__dropdown-placeholder {
             display: flex;
             justify-content: space-between;
@@ -64,18 +68,31 @@
             }
 
             .calc__dropdown-list-icon {
-                
+
             }
         }
 
         .calc__dropdown-list {
-            display: none;
-            position: absolute;
-            left: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
 
-            width: inherit;
+            position: absolute;
+            top: 55px;
+            left: -1px;
+
+            width: 100.5%;
             border: 1px solid variables.$red-100;
             border-radius: 6px;
+
+            padding-block: inherit;
+            padding-left: inherit;
+            padding-right: inherit;
+
+            background: variables.$white-100;
+
+            display: none;
+
         }
     }
 
