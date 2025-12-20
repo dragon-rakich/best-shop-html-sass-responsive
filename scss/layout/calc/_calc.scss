@@ -44,6 +44,7 @@
 
         padding-block: 0.8125em;
         padding-left: 1.53em;
+        padding-right: 0.875em;
 
         border: 1px solid variables.$primary-color-200;
         border-radius: 6px;
@@ -53,12 +54,18 @@
     }
 
     .calc__dropdown {
-        background-image: url("/assets/arrow-down-icon.svg");
-        background-repeat: no-repeat;
-        background-position: 98% 50%;
-
         .calc__dropdown-placeholder {
-            color: variables.$grey-200;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .calc__dropdown-placeholder-text {
+                color: variables.$grey-200;
+            }
+
+            .calc__dropdown-list-icon {
+                
+            }
         }
 
         .calc__dropdown-list {
