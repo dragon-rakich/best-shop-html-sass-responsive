@@ -2,11 +2,13 @@
 @use '../../common/mixins';
 
 .calc {
-    padding-top: 5.4375em;
-    padding-bottom: 6.8125em;
+    padding-top: 2.5em;
+    padding-bottom: 3em;
 
     font-family: variables.$secondary-ff;
     background-color: variables.$white-200;
+
+    @include mixins.tablet-styles(){padding-top: 5.4375em; padding-bottom: 6.8125em;}
     .container {
         max-width: 865px;
 
