@@ -230,9 +230,9 @@
                                 <img src="assets/arrow-down-icon.svg" alt="arrow icon" class="calc__dropdown-placeholder-icon">
                             </div>
                             <ul class="calc__dropdown-list">
-                                <li class="calc__dropdown-option">Basic</li>
-                                <li class="calc__dropdown-option">Professional</li>
-                                <li class="calc__dropdown-option">Premium</li>
+                                <li class="calc__dropdown-option" id="package-basic">Basic</li>
+                                <li class="calc__dropdown-option" id="package-pro">Professional</li>
+                                <li class="calc__dropdown-option" id="package-premium">Premium</li>
                             </ul>
                         </div>
                         <!-- hidden select -->
@@ -258,32 +258,32 @@
                 <div class="calc__col">
                     <div class="calc__output">
                         <div class="calc__output-rows">
-                            <div class="calc__output-row">
+                            <div class="calc__output-row" id="quantity-row">
                                 <p class="calc__output-row-name">Products</p>
                                 <p class="calc__output-row-row-middle">0x0</p>
                                 <p class="calc__output-row-price">$0</p>
                             </div>
-                            <div class="calc__output-row">
+                            <div class="calc__output-row" id="orders-row">
                                 <p class="calc__output-row-name">Order</p>
                                 <p class="calc__output-row-middle">0x0</p>
                                 <p class="calc__output-row-price">$0</p>
                             </div>
-                            <div class="calc__output-row">
+                            <div class="calc__output-row" id="packge-row">
                                 <p class="calc__output-row-name">Package</p>
                                 <p class="calc__output-row-middle">Package Name</p>
                                 <p class="calc__output-row-price">$0</p>
                             </div>
-                            <div class="calc__output-row">
+                            <div class="calc__output-row" id="accounting-row">
                                 <p class="calc__output-row-name">Accounting</p>
                                 <p class="calc__output-row-price">$0</p>
                             </div>
-                            <div class="calc__output-row">
+                            <div class="calc__output-row" id="terminal-row">
                                 <p class="calc__output-row-name">Terminal</p>
                                 <p class="calc__output-row-price">$0</p>
                             </div>
 
                         </div>
-                        <div class="calc__total">
+                        <div class="calc__total" id="total-row">
                             <p class="calc__total-name">Total</p>
                             <p class="calc__total-price">$0</p>
                         </div>
